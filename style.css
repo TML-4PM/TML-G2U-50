@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; transition: background 0.3s, color 0.3s; }
+.light-mode { background: #ffffff; color: #000; }
+.dark-mode { background: #121212; color: #fff; }
+#sticky-header { position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.8); padding: 10px; z-index: 1000; color: white; }
+button { background: #4CAF50; color: white; border: none; padding: 10px; cursor: pointer; }
+button:hover { background: #45a049; }
