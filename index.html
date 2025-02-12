@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildLifeShield - World's Deadliest Animals Insurance</title>
+    <meta name="description" content="Get insurance coverage for extreme wildlife encounters. Protect yourself while exploring the wild!">
+    <meta name="keywords" content="wildlife insurance, adventure insurance, extreme travel, animal encounters">
+    <meta property="og:title" content="WildLifeShield - Extreme Adventure Insurance">
+    <meta property="og:description" content="Secure your adventure with WildLifeShield! Explore safely with our wildlife insurance plans.">
+    <meta property="og:image" content="wildlife-banner.jpg">
+    <meta property="og:url" content="https://www.wildlifeshield.com">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <header id="sticky-header">
+        <h1>WildLifeShield - World's Deadliest Animals Insurance</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#insurance">Insurance Plans</a></li>
+                <li><a href="#custom-policy">Create Your Own</a></li>
+                <li><a href="#bundle">All-in-One Bundle</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#checkout">Checkout</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#cart">Cart <span id="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="insurance">
+        <h2>Our Insurance Plans - $9.99 Each</h2>
+        <div class="insurance-list">
+            <div class="insurance-card">
+                <img src="graphics/shark-attack.jpg" alt="Shark Attack Insurance">
+                <h3>Shark Attack Insurance</h3>
+                <p>Covers shark-related injuries while swimming or diving.</p>
+                <button onclick="addToCart('Shark Attack Insurance', 9.99)">Get Insured Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="checkout">
+        <h2>Checkout</h2>
+        <p>Review your cart and proceed to secure payment.</p>
+        <div id="cart-items"></div>
+        <button onclick="checkout()">Pay with Stripe</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 WildLifeShield. All rights reserved.</p>
+    </footer>
+</body>
+</html>
