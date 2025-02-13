@@ -9,10 +9,13 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(to right, #1e3a8a, #9333ea);
+    background: linear-gradient(to right, #ff4500, #ffae00);
     color: white;
     padding: 20px;
     text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 nav ul {
@@ -36,7 +39,7 @@ nav ul li a {
 
 /* Hero Section */
 #hero {
-    background: url('graphics/high-res-hero.jpg') center/cover no-repeat, linear-gradient(to bottom, #1e3a8a, #9333ea);
+    background: url('graphics/high-res-hero.jpg') center/cover no-repeat;
     height: 100vh;
     display: flex;
     align-items: center;
