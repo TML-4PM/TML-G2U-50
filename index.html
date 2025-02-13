@@ -38,13 +38,13 @@
         <h2>🦈 Our Insurance Plans - $9.99 Each</h2>
         <div class="insurance-grid">
             <div class="insurance-card">
-                <img loading="lazy" src="graphics/shark-attack.jpg" alt="Shark Attack Insurance">
+                <img loading="lazy" src="graphics/shark-attack.jpg" alt="Shark Attack Insurance" class="insurance-img">
                 <h3>Shark Attack Insurance</h3>
                 <p>Covers shark-related injuries while swimming or diving.</p>
                 <button onclick="addToCart('Shark Attack Insurance', 9.99)" class="animated-button">Get Insured Now</button>
             </div>
             <div class="insurance-card">
-                <img loading="lazy" src="graphics/snake-bite.jpg" alt="Snake Bite Insurance">
+                <img loading="lazy" src="graphics/snake-bite.jpg" alt="Snake Bite Insurance" class="insurance-img">
                 <h3>Snake Bite Insurance</h3>
                 <p>Emergency treatment for venomous snake bites.</p>
                 <button onclick="addToCart('Snake Bite Insurance', 9.99)" class="animated-button">Get Insured Now</button>
@@ -59,51 +59,8 @@
         <button class="primary-button animated-button" onclick="showOrderConfirmation()">💳 Pay with Stripe</button>
     </section>
 
-    <section id="order-confirmation" style="display:none; text-align: center; padding: 20px;">
-        <h2>✅ Order Confirmed!</h2>
-        <p>Thank you for purchasing WildLifeShield insurance. You will receive an email confirmation shortly.</p>
-        <button onclick="redirectToPayment()">Proceed to Payment</button>
-    </section>
-
     <footer>
         <p>&copy; 2025 WildLifeShield. All rights reserved.</p>
     </footer>
-
-    <script>
-        function addToCart(item, price) {
-            try {
-                let cartCount = document.getElementById("cart-count");
-                let count = parseInt(cartCount.innerText) + 1;
-                cartCount.innerText = count;
-                sessionStorage.setItem("cartCount", count);
-            } catch (e) {
-                console.error("Session storage is unavailable.", e);
-                alert("Your cart may not persist after page reload.");
-            }
-        }
-
-        function showOrderConfirmation() {
-            document.getElementById("checkout").style.display = "none";
-            document.getElementById("order-confirmation").style.display = "block";
-        }
-
-        function redirectToPayment() {
-            const paymentURL = "https://checkout.stripe.com";
-            alert("Redirecting to secure payment...");
-            window.location.href = paymentURL;
-        }
-    </script>
-
-    <style>
-        body { font-family: 'Poppins', sans-serif; background: #f5f5f5; color: #333; margin: 0; }
-        header { background: linear-gradient(to right, #1e3a8a, #9333ea); color: white; padding: 20px; text-align: center; }
-        nav ul { display: flex; justify-content: center; flex-wrap: wrap; padding: 0; list-style: none; }
-        nav ul li { margin: 0 15px; }
-        nav ul li a { color: white; text-decoration: none; font-size: 1.2em; font-weight: bold; }
-        #hero { background: url('graphics/high-res-hero.jpg') center/cover no-repeat, linear-gradient(to bottom, #1e3a8a, #9333ea); height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; font-size: 2rem; font-weight: bold; position: relative; overflow: hidden; }
-        .insurance-card:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(6, 190, 182, 0.5); }
-        .animated-button:active { transform: scale(0.95); box-shadow: 0 2px 8px rgba(6, 190, 182, 0.3); }
-        .cta-button:hover { box-shadow: 0 6px 15px rgba(255, 75, 43, 0.5); transform: translateY(-3px); }
-    </style>
 </body>
 </html>
